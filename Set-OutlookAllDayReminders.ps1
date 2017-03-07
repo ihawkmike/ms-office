@@ -2,7 +2,7 @@
 $ReminderSet = $true          # Value for reminder on/off. $False will disable reminder.
 
 # Set start date to today to only gather future events
-$Start = (Get-Date).AddDays(-1).ToShortDateString() + " 00:00"
+$Start = (Get-Date).ToShortDateString()
 
 # Filter all future all day events with default reminder set
 $Filter = "[AllDayEvent]='True' AND [Start] > '$Start' AND [ReminderSet] = 'True' AND [ReminderMinutesBeforeStart] = '1080'"
